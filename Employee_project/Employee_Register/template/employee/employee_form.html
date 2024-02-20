@@ -1,0 +1,28 @@
+{% extends 'employee/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+{{form.full_name|as_crispy_field}}
+{{form.emp_code|as_crispy_field}}
+
+<div class="row">
+    <div class="col-md-5">
+        {{form.mobile|as_crispy_field}}
+    </div>
+    <div class="col-md-7">
+        {{form.position|as_crispy_field}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-7">
+        <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+    </div>
+    <div class="col-md-5">
+        <a href="" class="btn btn-secondary btn-block btn-lg">Back To List</a>
+    </div>
+</div>
+{% endblock %}
+
+
+<!-- <p>django curd operation</p> -->
